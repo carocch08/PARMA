@@ -1,7 +1,7 @@
 
 public class Time {
 
-	public void time_ejecution()
+	@Test public void time_ejecution()
 	{
 		long time_start, time_end;
 		time_start = System.currentTimeMillis();
