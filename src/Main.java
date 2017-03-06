@@ -5,7 +5,10 @@ public class Main{
 //		Convolution c = new Convolution();
 //		c.make_convolution("Captura2.jpg");
 		
-		HistoEQ hEQ = new HistoEQ();
-		hEQ.eqHisto("Captura2.jpg");
+//		HistoEQ hEQ = new HistoEQ();
+//		hEQ.eqHisto("Captura2.jpg");
+		
+		Time t = new Time();
+		t.time_ejecution();
 	 }
 }
