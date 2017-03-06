@@ -6,13 +6,13 @@ import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
 
 public class Convolution {
-   public void make_convolution(){
+   public void make_convolution(String file_name){
    
       try {
          int kernelSize = 3;
          System.loadLibrary( Core.NATIVE_LIBRARY_NAME );
          
-         Mat source = Imgcodecs.imread("Captura2.jpg",  Imgcodecs.CV_LOAD_IMAGE_GRAYSCALE);
+         Mat source = Imgcodecs.imread(file_name,  Imgcodecs.CV_LOAD_IMAGE_GRAYSCALE);
          Mat destination = new Mat(source.rows(),source.cols(),source.type());
          
          Mat kernel = new Mat(kernelSize,kernelSize, CvType.CV_32F){
