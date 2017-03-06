@@ -18,9 +18,7 @@ public class HistoEQ {
 		   {
 			    int inicio = file_name.indexOf(".");
 			    String res = file_name.substring(0, inicio);
-			    System.out.println(inicio);
-				String output_file = res + "GrayScale"; 
-				System.out.println(output_file);
+				String output_file = res + "GrayScale"; 				
 				System.loadLibrary( Core.NATIVE_LIBRARY_NAME );
 				File input = new File(file_name);
 				BufferedImage image = ImageIO.read(input);	
