@@ -31,8 +31,11 @@ public class Convolution {
             }
          };
          
+         int aparicion = file_name.indexOf(".");
+         String name = file_name.substring(0, aparicion);
          Imgproc.filter2D(source, destination, -1, kernel);
-         Imgcodecs.imwrite("Convolution.jpg", destination);
+         String finalName = name + "Conv.jpg";
+         Imgcodecs.imwrite(finalName, destination);
          
       } catch (Exception e) {
           System.out.println("Error: " + e.getMessage());

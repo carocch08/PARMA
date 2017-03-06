@@ -13,8 +13,7 @@ import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
 
 public class HistoEQ {
-	
-	@Test 		
+	 		
 	public void eqHisto (String file_name)
 	{
 		try 
@@ -23,9 +22,12 @@ public class HistoEQ {
 				Mat source = Imgcodecs.imread(file_name, Imgcodecs.CV_LOAD_IMAGE_GRAYSCALE);
 				Mat destination = new Mat(source.rows(),source.cols(),source.type());
 				   
+				int aparicion = file_name.indexOf(".");
+		        String name = file_name.substring(0, aparicion);
+		        String finalName = name + "HistoEQ.jpg";
+		        
 				Imgproc.equalizeHist(source, destination);
-				String finalRes = file_name + "EQ.jpg";
-				Imgcodecs.imwrite(finalRes, destination);
+				Imgcodecs.imwrite(finalName, destination);
 			     
 		    } 
 		    catch (Exception e) 
