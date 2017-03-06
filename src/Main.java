@@ -2,7 +2,7 @@ public class Main{
 	
 	public static void main( String[] args )
 	 {
-		Convolucion c = new Convolucion();
+		Convolution c = new Convolution();
 		c.make_convolution();
 		
 		HistoEQ hEQ = new HistoEQ();

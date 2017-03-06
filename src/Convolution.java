@@ -5,7 +5,7 @@ import org.opencv.core.Mat;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
 
-public class Convolucion {
+public class Convolution {
    public void make_convolution(){
    
       try {
