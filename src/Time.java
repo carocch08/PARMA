@@ -8,6 +8,5 @@ public class Time {
 		time_start = System.currentTimeMillis();
 		time_end = System.currentTimeMillis();			
 		System.out.println("The task has taken "+ ( time_end - time_start ) +" milliseconds");		
-	}
-	
+	}	
 }
