@@ -10,7 +10,9 @@ public class Main{
 		
 //		Time t = new Time();
 //		t.time_ejecution();
-		GaussFilter gauss = new GaussFilter();
-		gauss.gauss_filter("Captura2.jpg", 0.4);
+		BilateralFilter bil = new BilateralFilter();
+		bil.bilateral_filter("Bila.png", 1, 2);
+//		GaussFilter gauss = new GaussFilter();
+//		gauss.gauss_filter("Captura2.jpg", 0.4);
 	 }
 }

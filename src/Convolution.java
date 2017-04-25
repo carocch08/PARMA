@@ -34,8 +34,8 @@ public class Convolution {
          int aparicion = file_name.indexOf(".");
          String name = file_name.substring(0, aparicion);
          Imgproc.filter2D(source, destination, -1, kernel);
-         String finalName = name + "Conv.jpg";
-         Imgcodecs.imwrite(finalName, destination);
+         String final_name = name + "Conv.jpg";
+         Imgcodecs.imwrite(final_name, destination);
          
       } catch (Exception e) {
           System.out.println("Error: " + e.getMessage());

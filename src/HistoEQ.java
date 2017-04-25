@@ -15,10 +15,10 @@ public class HistoEQ {
 				   
 				int aparicion = file_name.indexOf(".");
 		        String name = file_name.substring(0, aparicion);
-		        String finalName = name + "HistoEQ.jpg";
+		        String final_name = name + "HistoEQ.jpg";
 		        
 				Imgproc.equalizeHist(source, destination);
-				Imgcodecs.imwrite(finalName, destination);
+				Imgcodecs.imwrite(final_name, destination);
 			     
 		    } 
 		    catch (Exception e) 
