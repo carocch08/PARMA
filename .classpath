@@ -13,13 +13,12 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="C:/Users/Carolina/Downloads/Instaladores/opencv/build/java/opencv-320.jar" sourcepath="C:/Users/Carolina/Downloads/Instaladores/opencv/build/java/opencv-320.jar">
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="C:/opencv/build/java/opencv-320.jar">
 		<attributes>
-			<attribute name="javadoc_location" value="file:/C:/opencv/build/java/x64/"/>
 			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="C:/opencv/build/java/x64"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry kind="lib" path="C:/Users/Carolina/Downloads/junit-4.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Carolina/Downloads/junit-4.12.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

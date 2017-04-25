@@ -8,7 +8,9 @@ public class Main{
 //		HistoEQ hEQ = new HistoEQ();
 //		hEQ.eqHisto("Captura2.jpg");
 		
-		Time t = new Time();
-		t.time_ejecution();
+//		Time t = new Time();
+//		t.time_ejecution();
+		GaussFilter gauss = new GaussFilter();
+		gauss.gauss_filter("Captura2.jpg", 0.4);
 	 }
 }
