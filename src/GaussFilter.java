@@ -14,7 +14,7 @@ public class GaussFilter {
 	         Mat source = Imgcodecs.imread(file_name, Imgcodecs.CV_LOAD_IMAGE_GRAYSCALE);
 	         
 	         Mat destination = new Mat(source.rows(),source.cols(),source.type());
-	         org.opencv.core.Size size = new org.opencv.core.Size(45,45);
+	         org.opencv.core.Size size = new org.opencv.core.Size(11,45);
 	         Imgproc.GaussianBlur(source, destination, size, standardDev);
 			   
 			 int aparicion = file_name.indexOf(".");

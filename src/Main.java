@@ -13,7 +13,7 @@ public class Main{
 //		BilateralFilter bil = new BilateralFilter();
 //		bil.bilateral_filter("Bila.png", 1, 2);
 		GaussFilter gauss = new GaussFilter();
-		gauss.gauss_filter("Domino.png", 0.5);
+		gauss.gauss_filter("Domino.png", 0);
 //		Psnr p = new Psnr();
 //		p.calculate_psnr("Image.png", "Resultado.jpg");
 	 }
