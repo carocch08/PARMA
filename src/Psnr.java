@@ -65,8 +65,8 @@ public class Psnr {
 	public static double log10(double x) {
 		return Math.log(x)/Math.log(10);
 	}
-	 
-	 public void calculate_psnr(String file_name1, String file_name2)
+
+	 public double calculate_mse(String file_name1, String file_name2)
 	 {
 		    int heigh = get_heigh(file_name1);
 	    	int width = get_width(file_name2);
@@ -88,12 +88,17 @@ public class Psnr {
 	          }
 	        }
 
-	        mse = noise/(heigh*width); // Mean square error
+	        mse = noise/(heigh*width); // Mean square error	        
 	        System.out.println("MSE: " + mse);
-//	        System.out.println("SNR: " + 10*log10(signal/noise));
-	        System.out.println("PSNR(max=255): " + (10*log10(255*255/mse)));
-	        System.out.println("PSNR(max=" + peak + "): " + 10*log10((peak*peak)/mse));
-		 
+	        return mse;
+	 }
+	 
+	 public double calculate_psnr(String file_name1, String file_name2)
+	 {
+		 double mse = calculate_mse(file_name1, file_name2);
+		 double psnr = 10*log10(255*255/mse);
+		 System.out.println("PSNR: " + psnr);
+		 return psnr;
 	 }
 
 }

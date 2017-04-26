@@ -12,9 +12,9 @@ public class Main{
 //		t.time_ejecution();
 //		BilateralFilter bil = new BilateralFilter();
 //		bil.bilateral_filter("Bila.png", 1, 2);
-		GaussFilter gauss = new GaussFilter();
-		gauss.gauss_filter("Domino.png", 0);
-//		Psnr p = new Psnr();
-//		p.calculate_psnr("Image.png", "Resultado.jpg");
+//		GaussFilter gauss = new GaussFilter();
+//		gauss.gauss_filter("Domino.png", 0);
+		Psnr p = new Psnr();
+		p.calculate_psnr("Celula.png", "Celula2.jpg");
 	 }
 }
