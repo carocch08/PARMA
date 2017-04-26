@@ -6,7 +6,15 @@ import java.io.InputStream;
 import javax.imageio.ImageIO;
 import javax.imageio.stream.ImageInputStream;
 
+import com.sun.org.glassfish.gmbal.ParameterNames;
+
 public class Psnr {
+	/* @param nombre del archivo
+	 * @param array para pasar los bytes de la imagen
+	 * @param alto de la imagen
+	 * @param ancho de la imagen
+	 * @ return void
+	 */ 	
 	 public void bytes_array(String file_name, int array[][], int heigh, int width) {
 		    try {
 		      File file = new File(file_name);
@@ -26,7 +34,10 @@ public class Psnr {
 		      System.exit(0);
 		    }
 		  }
-	 
+	 /*
+	  * @param nombre del archivo a analizar
+	  * @return alto de la imagen (matriz) 
+	  */
 	 public int get_heigh(String file_name)
 	  {
 		  try
@@ -44,7 +55,10 @@ public class Psnr {
 		  return 0;   
 	  }
 	
-	
+	 /*
+	  * @param nombre del archivo a analizar
+	  * @return ancho de la imagen (matriz)
+	  */
 	public int get_width(String file_name)
 	  {
 		  try
@@ -62,8 +76,8 @@ public class Psnr {
 		  return 0;   
 	  }
 	
-	public static double log10(double x) {
-		return Math.log(x)/Math.log(10);
+	public static double log10(double num) {
+		return Math.log(num)/Math.log(10);
 	}
 
 	 public double calculate_mse(String file_name1, String file_name2)
