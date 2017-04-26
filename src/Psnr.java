@@ -7,7 +7,7 @@ import javax.imageio.ImageIO;
 import javax.imageio.stream.ImageInputStream;
 
 public class Psnr {
-	 public void readByteArray(String file_name, int array[][], int heigh, int width) {
+	 public void bytes_array(String file_name, int array[][], int heigh, int width) {
 		    try {
 		      File file = new File(file_name);
 		      FileInputStream fin= new FileInputStream(file);
@@ -70,23 +70,22 @@ public class Psnr {
 	 {
 		    int heigh = get_heigh(file_name1);
 	    	int width = get_width(file_name2);
-	        int img1[][], img2[][];
-	        double  peak, signal, noise, mse;
+	        int image1[][], image2[][];
+	        double result, mse;
 
-	        img1 = new int[heigh][width];
-	        img2 = new int[heigh][width];
-	        readByteArray(file_name1, img1, heigh, width);
-	        readByteArray(file_name2, img2, heigh, width);
+	        image1 = new int[heigh][width];
+	        image2 = new int[heigh][width];
+	        bytes_array(file_name1, image1, heigh, width);
+	        bytes_array(file_name2, image2, heigh, width);
 
-	        signal = noise = peak = 0;
+	        result = 0;
 	        for (int i1=0; i1<heigh; i1++) {
 	          for (int j=0; j<width; j++) {
-	            signal += img1[i1][j] * img1[i1][j];
-	            noise += (img1[i1][j] - img2[i1][j]) * (img1[i1][j] - img2[i1][j]);
+	            result += (image1[i1][j] - image2[i1][j]) * (image1[i1][j] - image2[i1][j]);
 	          }
 	        }
 
-	        mse = noise/(heigh*width); // Mean square error	        
+	        mse = result/(heigh*width); // Mean square error	        
 	        System.out.println("MSE: " + mse);
 	        return mse;
 	 }

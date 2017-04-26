@@ -13,5 +13,4 @@ public class PsnrTest {
 		Psnr p = new Psnr();
 		p.calculate_psnr("Celula.png", "Celula2.jpg");
 	}
-
 }

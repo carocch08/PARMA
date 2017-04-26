@@ -1,6 +1,6 @@
 import org.junit.Test;
 
-public class BillateralFilterTest {
+public class BilateralFilterTest {
 
 	@Test
 	public void test() {
