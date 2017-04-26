@@ -7,9 +7,9 @@ import javax.imageio.ImageIO;
 import javax.imageio.stream.ImageInputStream;
 
 public class Psnr {
-	 public void readByteArray(String fname, int array[][], int heigh, int width) {
+	 public void readByteArray(String file_name, int array[][], int heigh, int width) {
 		    try {
-		      File file = new File(fname);
+		      File file = new File(file_name);
 		      FileInputStream fin= new FileInputStream(file);
 		       for (int i=0; i<heigh; i++)
 		       {
