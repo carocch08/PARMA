@@ -83,8 +83,6 @@ public class Psnr {
 	          for (int j=0; j<width; j++) {
 	            signal += img1[i1][j] * img1[i1][j];
 	            noise += (img1[i1][j] - img2[i1][j]) * (img1[i1][j] - img2[i1][j]);
-	            if (peak < img1[i1][j])
-	              peak = img1[i1][j];
 	          }
 	        }
 
