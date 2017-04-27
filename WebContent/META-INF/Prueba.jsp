@@ -7,25 +7,18 @@
 </head>
 <body>
 <body>
-        <div class="container">
-            <h1>Procesador de imágenes</h1>
-            <form enctype="multipart/form-data">
-                <div class="form-group">
-                    <input id="file" type="file" class="file" multiple=true data-preview-file-type="any">
-                    </p>
-                    <input id="dominance" type="value" class="value" multiple=true data-preview-file-type="any">
-                    <input id="space" type="value" class="value" multiple=true data-preview-file-type="any">                                        
-					<% System.out.println("Hola"); out.println("Holis"); %>
-                </div>
-                <div class="form-group">
-                    <input type="button" name="fetchdata" value="Aceptar" onclick="">
-                    <button class="btn btn-default" type="reset">Reset</button>
-                </div>
-            </form>
-        </div>
-    </body>
+	<form action="Bilateral" method="conversion">
+		<table>
+			<tr>
+				<td>Archivo</td>
+				<td><input type="text" name ="image" /></td>
+			</tr>
+			<td>
+				<input type="submit"/>
+			</td>
+		</table>		
+	</form>    
+    
 </body>
-<%
 
-%>
 </html>
