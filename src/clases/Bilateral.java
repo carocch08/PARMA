@@ -44,6 +44,7 @@ public class Bilateral extends HttpServlet {
 //			int convInt_dominance = Integer.parseInt(intensity_dominance);
 //			int convSpace = Integer.parseInt(space);
 			System.loadLibrary(Core.NATIVE_LIBRARY_NAME );
+//			System.load("opencv_java320");
 	         
 	         Mat source = Imgcodecs.imread(file_name, Imgcodecs.CV_LOAD_IMAGE_GRAYSCALE);
 	         
