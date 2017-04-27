@@ -9,15 +9,17 @@
 	<form action="Bilateral" >
 		<table>
 			<tr>
-				<td>Imagen</td>
-				<td><input type="text" name ="name" /></td>
+				<div class="form-group">
+	        		<input id="file-1" type="file" class="file" multiple=true name="file1" data-preview-file-type="any">
+	        		<BR>
+	        	</div>
 			</tr>
 			<tr>
-				<td>Dominante</td>
+				<td>Dominante:</td>
 				<td><input type="text" name ="dominante" /></td>
 			</tr>
 			<tr>
-				<td>Espacio</td>
+				<td>Espacio:</td>
 				<td><input type="text" name ="space" /></td>
 			</tr>
 			<tr>
