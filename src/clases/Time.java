@@ -1,4 +1,4 @@
-package logica;
+package clases;
 import java.lang.reflect.Method;
 
 public class Time {

@@ -1,4 +1,4 @@
-package logica;
+package clases;
 import org.junit.Test;
 
 public class PsnrTest {

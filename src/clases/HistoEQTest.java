@@ -1,4 +1,4 @@
-package logica;
+package clases;
 import static org.junit.Assert.*;
 
 import java.util.Arrays;
@@ -15,8 +15,8 @@ public class HistoEQTest {
 	  @Test
 	  public void archivoExistente() {
 		  HistoEQ test = new HistoEQ();
-		  test.eqHisto("Captura.jpg");
-		  test.eqHisto("Ejemplo.jpg");		  
+		  test.eqHisto("Domino.png");
+//		  test.eqHisto("Ejemplo.jpg");		  
 	  } 
 	  @Test
 	  public void archivoNoExistente(){
