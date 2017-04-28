@@ -1,5 +1,7 @@
 package clases;
 
+import static org.junit.Assert.fail;
+
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileInputStream;
@@ -14,6 +16,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import org.junit.Test;
 
 /**
  * Servlet implementation class PsnrServlet
@@ -163,10 +167,11 @@ public class PsnrServlet extends HttpServlet {
 	        return mse;
 	 }
 	 
-	 /*
-	  * @param nombre del primer archivo a analizar
-	  * @return nombre del segundo archivo a analizar
-	  * @return un double con el resultado del psnr
-	  */
+		@Test
+		public void test(HttpServletRequest request, HttpServletResponse response)throws ServletException, java.io.IOException {
+			
+//			String file_name1 = request.s
+			fail("Not yet implemented");
+		}
 		 
 }
