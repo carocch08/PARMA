@@ -40,10 +40,10 @@
 </style>
 </head>
 	 <body>
-		 <form enctype="multipart/form-data" action="Bilateral">
+		 <form enctype="multipart/form-data" action="GaussianFilterServlet">
 		 	<div class="general">
 		     	<h1>Filtro Gaussiano</h1>
-		        <form action="Bilateral" >
+		        <form action="GaussianFilterServlet" >
 		        	<div class="form-group">
 				    	<input id="file-1" type="file" class="file" multiple=true name="file1" data-preview-file-type="any">
 				        <BR>

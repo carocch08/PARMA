@@ -70,7 +70,14 @@ public class PsnrServlet extends HttpServlet {
 			 out.close();
 		 }
     }
-    		
+    /*
+     * @param file_name es la ruta de la imagen a analizar
+     * @param array es la matriz de pixeles de la imagen
+     * @param heigh es el alto de la imagen a analizar
+     * @param heigh es el ancho de la imagen a analizar
+     * @return void
+     * @author Carolina Campos
+     * */    		
 	public void bytes_array(String file_name, int array[][], int heigh, int width) {
 	    try {
 	      File file = new File(file_name);
@@ -92,7 +99,8 @@ public class PsnrServlet extends HttpServlet {
 	  }
 	 /*
 	  * @param nombre del archivo a analizar
-	  * @return alto de la imagen (matriz) 
+	  * @return alto de la imagen (matriz)
+	  * @author Carolina Campos 
 	  */
 	public int get_heigh(String file_name)
 	{
@@ -115,6 +123,7 @@ public class PsnrServlet extends HttpServlet {
 	 /*
 	  * @param nombre del archivo a analizar
 	  * @return ancho de la imagen (matriz)
+	  * @author Carolina Campos
 	  */
 	public int get_width(String file_name)
 	{
@@ -142,6 +151,7 @@ public class PsnrServlet extends HttpServlet {
 	  * @param nombre del primer archivo a analizar
 	  * @return nombre del segundo archivo a analizar
 	  * @return un double con el resultado del mse
+	  * @author Carolina Campos
 	  */
 	 public double calculate_mse(String file_name1, String file_name2)
 	 {
@@ -165,13 +175,5 @@ public class PsnrServlet extends HttpServlet {
 	        mse = result/(heigh*width); // Mean square error	        
 	        System.out.println("MSE: " + mse);
 	        return mse;
-	 }
-	 
-		@Test
-		public void test(HttpServletRequest request, HttpServletResponse response)throws ServletException, java.io.IOException {
-			
-//			String file_name1 = request.s
-			fail("Not yet implemented");
-		}
-		 
+	 }		 
 }

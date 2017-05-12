@@ -6,6 +6,6 @@ public class BilateralFilterTest {
 	@Test
 	public void test() {
 		BilateralFilter bft = new BilateralFilter();
-		bft.bilateral_filter("Bilateral.png", 1, 2);
+		bft.bilateral_filter("Bilateral.jpg", 15, 80);
 	}
 }

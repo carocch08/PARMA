@@ -7,15 +7,8 @@ import java.io.InputStream;
 import javax.imageio.ImageIO;
 import javax.imageio.stream.ImageInputStream;
 
-import com.sun.org.glassfish.gmbal.ParameterNames;
-
 public class Psnr {
-	/* @param nombre del archivo
-	 * @param array para pasar los bytes de la imagen
-	 * @param alto de la imagen
-	 * @param ancho de la imagen
-	 * @ return void
-	 */ 	
+	//Obtener los pixeles de la imagen.
 	 public void bytes_array(String file_name, int array[][], int heigh, int width) {
 		    try {
 		      File file = new File(file_name);
@@ -24,7 +17,7 @@ public class Psnr {
 		       {
 		    	   for (int j=0; j<width; j++)
 		    	   {
-		    		   array[i][j] = (int)(0xFF & fin.read()); // Unsigned char to integer
+		    		   array[i][j] = (int)(0xFF & fin.read()); 
 		    	   }       	   
 		       }
 		         
@@ -35,10 +28,8 @@ public class Psnr {
 		      System.exit(0);
 		    }
 		  }
-	 /*
-	  * @param nombre del archivo a analizar
-	  * @return alto de la imagen (matriz) 
-	  */
+
+	 //Obtener el alto de la imagen dada
 	 public int get_heigh(String file_name)
 	  {
 		  try
@@ -56,10 +47,8 @@ public class Psnr {
 		  return 0;   
 	  }
 	
-	 /*
-	  * @param nombre del archivo a analizar
-	  * @return ancho de la imagen (matriz)
-	  */
+
+	 //Obtener el ancho de la imagen dada
 	public int get_width(String file_name)
 	  {
 		  try
@@ -81,11 +70,7 @@ public class Psnr {
 		return Math.log(num)/Math.log(10);
 	 }
 
-	 /*
-	  * @param nombre del primer archivo a analizar
-	  * @return nombre del segundo archivo a analizar
-	  * @return un double con el resultado del mse
-	  */
+	 //Calcula el mse entre las imágenes pasadas por parámetros
 	 public double calculate_mse(String file_name1, String file_name2)
 	 {
 		    int heigh = get_heigh(file_name1);
@@ -110,11 +95,7 @@ public class Psnr {
 	        return mse;
 	 }
 	 
-	 /*
-	  * @param nombre del primer archivo a analizar
-	  * @return nombre del segundo archivo a analizar
-	  * @return un double con el resultado del psnr
-	  */
+	 //Calcula el psnr entre las imágenes pasadas por parámetros
 	 public double calculate_psnr(String file_name1, String file_name2)
 	 {
 		 double mse = calculate_mse(file_name1, file_name2);
