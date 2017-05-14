@@ -1,6 +1,12 @@
 package clases;
 import java.lang.reflect.Method;
 
+/*
+ * @param no tiene parametros
+ * @return void
+ * @author Carolina Campos
+ * */
+
 public class Time {
 
 	public void time_ejecution()
