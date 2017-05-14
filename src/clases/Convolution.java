@@ -6,6 +6,11 @@ import org.opencv.core.Mat;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
 
+/*
+ * @param file_name es la ruta de la imagen a analizar
+ * @return void
+ * @author Juan Guevara
+ * */
 public class Convolution {
    public void make_convolution(String file_name){
    
