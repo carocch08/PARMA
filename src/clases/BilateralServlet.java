@@ -18,13 +18,13 @@ import org.opencv.imgproc.Imgproc;
  * Servlet implementation class Bilateral
  */
 @WebServlet(name = "Bilateral", urlPatterns = {"/Bilateral"})
-public class Bilateral extends HttpServlet {
+public class BilateralServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Bilateral() {
+    public BilateralServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -38,23 +38,23 @@ public class Bilateral extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		try {
 
-			String file_name = request.getParameter("name");
+			String file_name = request.getParameter("file1");
 			String intensity_dominance = request.getParameter("dominance");
 			String space = request.getParameter("space");
 //			int convInt_dominance = Integer.parseInt(intensity_dominance);
 //			int convSpace = Integer.parseInt(space);
-			System.loadLibrary(Core.NATIVE_LIBRARY_NAME );
+			System.load("C:\\Users\\Carolina\\Downloads\\Instaladores\\opencv\\build\\java\\x64\\opencv_java320.dll");
 	         
 	         Mat source = Imgcodecs.imread(file_name, Imgcodecs.CV_LOAD_IMAGE_GRAYSCALE);
 	         
 	         Mat destination = new Mat(source.rows(),source.cols(),source.type());
-	         Imgproc.bilateralFilter(source, destination, 1, 80, 1, Core.BORDER_DEFAULT);
+	         Imgproc.bilateralFilter(source, destination, 15, 80, 80, Core.BORDER_DEFAULT);
 			   
 			 int aparicion = file_name.indexOf(".");
 	         String name = file_name.substring(0, aparicion);
 	         String final_name = name + "BilateralFilter.jpg";
 	        
-			 Imgproc.equalizeHist(source, destination);
+//			 Imgproc.equalizeHist(source, destination);
 			 Imgcodecs.imwrite(final_name, destination);
 			
 	      } finally

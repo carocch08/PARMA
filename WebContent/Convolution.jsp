@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Filtro Gaussiano</title>
+<title>Convolución</title>
 <style>
 	body {background-image: url("background.jpg");
 		color: white;
@@ -40,18 +40,15 @@
 </style>
 </head>
 	 <body>
-		 <form enctype="multipart/form-data" action="GaussFilterServlet">
+		 <form enctype="multipart/form-data" action="ConvolutionServlet">
 		 	<div class="general">
-		     	<h1>Filtro Gaussiano</h1>
-		        <form action="GaussianFilterServlet" >
+		     	<h1>Convolución</h1>
+		        <form action="ConvolutionServlet" >
 		        	<div class="form-group">
 				    	<input id="file-1" type="file" class="file" multiple=true name="file1" data-preview-file-type="any">
 				        <BR>
 				    </div>					
 					<div class="form-group">
-					<label for="other">Desviación estándar:</label>
-						<input type="text" name ="desvStand" />
-					</div>
 						<td><input type="submit" form="form1" value="Resultado"></td>
 				</form> 
 		   </div>

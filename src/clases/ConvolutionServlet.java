@@ -10,21 +10,22 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.opencv.core.Core;
+import org.opencv.core.CvType;
 import org.opencv.core.Mat;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
 
 /**
- * Servlet implementation class GaussFilterServlet
+ * Servlet implementation class ConvolutionServlet
  */
-@WebServlet("/GaussFilterServlet")
-public class GaussFilterServlet extends HttpServlet {
+@WebServlet("/ConvolutionServlet")
+public class ConvolutionServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-//    static{System.loadLibrary("C:\\Users\\Carolina\\Downloads\\Instaladores\\opencv\\build\\java\\x64\\opencv_java320.dll");}
+       
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public GaussFilterServlet() {
+    public ConvolutionServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -34,31 +35,42 @@ public class GaussFilterServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.setContentType("text/html;charset=UTF-8");
-		PrintWriter out = response.getWriter();
+	    response.setContentType("text/html;charset=UTF-8");
+	    PrintWriter out = response.getWriter();
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 		String file_name = request.getParameter("file1");
-//		String desv_stand = request.getParameter("desvStand");
 		try {
-	         System.load("C:\\Users\\Carolina\\Downloads\\Instaladores\\opencv\\build\\java\\x64\\opencv_java320.dll");
-//	         System.load("C:\\Users\\Katerine\\Documents\\openCV\\opencv\\build\\java\\x64\\opencv_java2413.dll");
-	         
-	         Mat source = Imgcodecs.imread(file_name, Imgcodecs.CV_LOAD_IMAGE_GRAYSCALE);
-	         
+	         int kernelSize = 9;
+             System.load("C:\\Users\\Carolina\\Downloads\\Instaladores\\opencv\\build\\java\\x64\\opencv_java320.dll");
+             
+	         Mat source = Imgcodecs.imread("grayscale.jpg", Imgcodecs.CV_LOAD_IMAGE_GRAYSCALE);
 	         Mat destination = new Mat(source.rows(),source.cols(),source.type());
-	         org.opencv.core.Size size = new org.opencv.core.Size(11,45);
-	         Imgproc.GaussianBlur(source, destination, size, 2);
-			   
-			 int aparicion = file_name.indexOf(".");
-	         String name = file_name.substring(0, aparicion);
-	         String final_name = name + "GaussFilter.jpg";
-	        
-			 Imgproc.equalizeHist(source, destination);
-			 Imgcodecs.imwrite(final_name, destination);
-	      
+	         
+	         Mat kernel = new Mat(kernelSize,kernelSize, CvType.CV_32F){
+	            {
+	               put(0,0,-1);
+	               put(0,1,0);
+	               put(0,2,1);
+
+	               put(1,0-1);
+	               put(1,1,0);
+	               put(1,2,1);
+
+	               put(2,0,-1);
+	               put(2,1,0);
+	               put(2,2,1);
+	            }
+	         };  
+	         
+	         Imgproc.filter2D(source, destination, -1, kernel);
+	         Imgcodecs.imwrite("output.jpg", destination);
+	         
 	      } catch (Exception e) {
 	         System.out.println("Error: " + e.getMessage());
 	      }
-	}
+	   }
+	
+	   
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)

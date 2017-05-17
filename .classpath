@@ -7,9 +7,9 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry kind="lib" path="C:/opencv/build/java/opencv-320.jar">
+	<classpathentry kind="lib" path="C:/Users/Carolina/Downloads/Instaladores/opencv/build/java/opencv-320.jar">
 		<attributes>
-			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="C:/opencv/build/java/x64"/>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="C:/Users/Carolina/Downloads/Instaladores/opencv/build/java/x64"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/Carolina/Downloads/Instaladores/junit-4.12.jar"/>
