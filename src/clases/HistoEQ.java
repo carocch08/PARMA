@@ -5,7 +5,11 @@ import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
 
 public class HistoEQ {
-	 		
+/*
+ * @param file_name es la ruta de la imagen a analizar
+ * @return void
+ * @author Carolina Campos
+ * */	
 	public void eqHisto (String file_name)
 	{
 		try 
