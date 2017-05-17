@@ -39,8 +39,8 @@ public class BilateralServlet extends HttpServlet {
 		try {
 
 			String file_name = request.getParameter("file1");
-			String intensity_dominance = request.getParameter("dominance");
-			String space = request.getParameter("space");
+//			String intensity_dominance = request.getParameter("dominance");
+//			String space = request.getParameter("space");
 //			int convInt_dominance = Integer.parseInt(intensity_dominance);
 //			int convSpace = Integer.parseInt(space);
 			System.load("C:\\Users\\Carolina\\Downloads\\Instaladores\\opencv\\build\\java\\x64\\opencv_java320.dll");

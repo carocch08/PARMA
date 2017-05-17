@@ -15,12 +15,12 @@ public class HistoEQTest {
 	  @Test
 	  public void archivoExistente() {
 		  HistoEQ test = new HistoEQ();
-		  test.eqHisto("Domino.png");
+		  test.eqHisto("Captura.png");
 //		  test.eqHisto("Ejemplo.jpg");		  
 	  } 
-	  @Test
-	  public void archivoNoExistente(){
-		  HistoEQ test = new HistoEQ();
-		  test.eqHisto("CapturaN.jpg");
-	  }
+//	  @Test
+//	  public void archivoNoExistente(){
+//		  HistoEQ test = new HistoEQ();
+//		  test.eqHisto("CapturaN.jpg");
+//	  }
 }
