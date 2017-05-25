@@ -1,9 +1,13 @@
 package clases;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
+import javax.servlet.ServletOutputStream;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -36,8 +40,6 @@ public class ConvolutionServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // TODO Auto-generated method stub
         response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
-        response.getWriter().append("Served at: ").append(request.getContextPath());
         String file_name = request.getParameter("file1");
         try {
           int kernelSize = 3;
@@ -63,12 +65,26 @@ public class ConvolutionServlet extends HttpServlet {
           };
           
           Imgproc.filter2D(source, destination, -1, kernel);
-          
+          String save_img = request.getParameter("saveImg");
           int aparicion = file_name.indexOf(".");
           String name = file_name.substring(0, aparicion);
           String final_name = name + "Conv.jpg";
           Imgcodecs.imwrite(final_name, destination);
-                   
+          
+          response.setContentType("image/jpeg");
+          ServletOutputStream out1;
+          out1 = response.getOutputStream();
+          FileInputStream img_conv = new FileInputStream(final_name);
+          BufferedInputStream inp_conv = new BufferedInputStream(img_conv);
+          BufferedOutputStream out_conv = new BufferedOutputStream(out1);
+          int ch = 0;
+          while ((ch=inp_conv.read()) != -1) {
+          out_conv.write(ch);
+          }             
+          inp_conv.close();
+          img_conv.close();
+          out_conv.close();
+          out1.close(); 
           
        } catch (Exception e) {
            System.out.println("Error: " + e.getMessage());

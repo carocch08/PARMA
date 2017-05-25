@@ -1,9 +1,13 @@
 package clases;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
+import javax.servlet.ServletOutputStream;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -20,7 +24,6 @@ import org.opencv.imgproc.Imgproc;
 @WebServlet("/GaussFilterServlet")
 public class GaussFilterServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-//    static{System.loadLibrary("C:\\Users\\Carolina\\Downloads\\Instaladores\\opencv\\build\\java\\x64\\opencv_java320.dll");}
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -35,26 +38,38 @@ public class GaussFilterServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.setContentType("text/html;charset=UTF-8");
-		PrintWriter out = response.getWriter();
 		String file_name = request.getParameter("file1");
-//		String desv_stand = request.getParameter("desvStand");
 		try {
 	         System.load("C:\\Users\\Carolina\\Downloads\\Instaladores\\opencv\\build\\java\\x64\\opencv_java320.dll");
-//	         System.load("C:\\Users\\Katerine\\Documents\\openCV\\opencv\\build\\java\\x64\\opencv_java2413.dll");
 	         
 	         Mat source = Imgcodecs.imread(file_name, Imgcodecs.CV_LOAD_IMAGE_GRAYSCALE);
 	         
 	         Mat destination = new Mat(source.rows(),source.cols(),source.type());
 	         org.opencv.core.Size size = new org.opencv.core.Size(11,45);
 	         Imgproc.GaussianBlur(source, destination, size, 2);
-			   
-			 int aparicion = file_name.indexOf(".");
-	         String name = file_name.substring(0, aparicion);
-	         String final_name = name + "GaussFilter.jpg";
-	        
-			 Imgproc.equalizeHist(source, destination);
-			 Imgcodecs.imwrite(final_name, destination);
-	      
+	         String save_img = request.getParameter("saveImg");
+
+             int aparicion = file_name.indexOf(".");
+             String name = file_name.substring(0, aparicion);
+             String final_name = name + "GaussFilter.jpg";
+	            
+             Imgcodecs.imwrite(final_name, destination);
+             response.setContentType("image/jpeg");
+             ServletOutputStream out1;
+             out1 = response.getOutputStream();
+             FileInputStream img_conv = new FileInputStream(final_name);
+             BufferedInputStream inp_conv = new BufferedInputStream(img_conv);
+             BufferedOutputStream out_conv = new BufferedOutputStream(out1);
+             int ch = 0;
+             while ((ch=inp_conv.read()) != -1) {
+             out_conv.write(ch);
+             }             
+             inp_conv.close();
+             img_conv.close();
+             out_conv.close();
+             out1.close(); 
+	            
+	          
 	      } catch (Exception e) {
 	         System.out.println("Error: " + e.getMessage());
 	      }

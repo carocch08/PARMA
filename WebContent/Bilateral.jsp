@@ -42,10 +42,11 @@
 	 <body>
 		 <form enctype="multipart/form-data" action="Bilateral">
 		 	<div class="general">
-		     	<h1>Procesador de imágenes</h1>
+		     	<h1>Filtro Bilateral</h1>
 		        <form action="Bilateral" >
 		        	<div class="form-group">
-				    	<input id="file-1" type="file" class="file" multiple=true name="file1" data-preview-file-type="any">
+		        	<label for="other">Seleccione la imagen:</label>
+				    	<input id="file-1" type="file" class="file" multiple=true name="file1" data-preview-file-type="any">				    	
 				        <BR>
 				    </div>
 					<div class="form-group">
@@ -55,6 +56,13 @@
 					<div class="form-group">
 					<label for="other">Intensidad de espacio:</label>
 						<input type="text" name ="space" />
+					</div>
+					<div class="form-group">					
+						<label for="other">¿Desea guardar la imagen?</label>
+						<select id="saveImg" name="saveImg" style="text-align:center;">
+							<option value="Si">Sí</option>
+				        	<option value="No">No</option>
+						</select> 
 					</div>
 						<td><input type="submit" form="form1" value="Resultado"></td>
 				</form> 

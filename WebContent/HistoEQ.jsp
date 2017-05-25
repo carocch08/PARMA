@@ -42,12 +42,20 @@
 	 <body>
 		 <form enctype="multipart/form-data" action="EQHistoServlet">
 		 	<div class="general">
-		     	<h1>Ecualización de histogramas</h1>
+		     	<h1 align="left"> Ecualizador <br> <align="center">histogramas </h1>
 		        <form action="EQHistoServlet" >
 		        	<div class="form-group">
+		        		<label for="other">Seleccione la imagen:</label>
 				    	<input id="file-1" type="file" class="file" multiple=true name="file1" data-preview-file-type="any">
 				        <BR>
-				    </div>					
+				    </div>			
+				   	<div class="form-group">					
+						<label for="other">¿Desea guardar la imagen?</label>
+						<select id="saveImg" name="saveImg" style="text-align:center;">
+							<option value="Si">Sí</option>
+				        	<option value="No">No</option>
+						</select> 
+					</div>		
 					<div class="form-group">
 						<td><input type="submit" form="form1" value="Resultado"></td>
 				</form> 

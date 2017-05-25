@@ -35,21 +35,29 @@
 	    padding: 14px 20px;
 	    margin: 8px 0 0 35%;
 	    border: none;
-	    border-radius: 4px;
+	    border-radius: 4px; 
 	    cursor: pointer;}	
 </style>
 </head>
 	 <body>
 		 <form enctype="multipart/form-data" action="ConvolutionServlet">
 		 	<div class="general">
-		     	<h1>Convolución</h1>
+		     	<h1>Convolución <br> de imágenes</h1>
 		        <form action="ConvolutionServlet" >
 		        	<div class="form-group">
+		        		<label for="other">Seleccione la imagen:</label>
 				    	<input id="file-1" type="file" class="file" multiple=true name="file1" data-preview-file-type="any">
-				        <BR>
+				    <div class="form-group">					
+						<label for="other">¿Desea guardar la imagen?</label>
+						<select id="saveImg" name="saveImg" style="text-align:center;">
+							<option value="Si">Sí</option>
+				        	<option value="No">No</option>
+						</select> 
+					</div>
 				    </div>					
 					<div class="form-group">
 						<td><input type="submit" form="form1" value="Resultado"></td>
+					</div>					
 				</form> 
 		   </div>
 		 </form>
