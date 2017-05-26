@@ -56,14 +56,7 @@
 					<div class="form-group">
 					<label for="other">Intensidad de espacio:</label>
 						<input type="text" name ="space" />
-					</div>
-					<div class="form-group">					
-						<label for="other">¿Desea guardar la imagen?</label>
-						<select id="saveImg" name="saveImg" style="text-align:center;">
-							<option value="Si">Sí</option>
-				        	<option value="No">No</option>
-						</select> 
-					</div>
+					</div>					
 						<td><input type="submit" form="form1" value="Resultado"></td>
 				</form> 
 		   </div>
