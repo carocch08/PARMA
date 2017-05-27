@@ -43,7 +43,7 @@ public class PsnrServlet extends HttpServlet {
     	processRequest(request, response);
     }
     /*
-     * @autor Carolina Campos
+     * @author Carolina Campos
      * */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, java.io.IOException 
     {
