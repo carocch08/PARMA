@@ -41,7 +41,10 @@ public class ConvolutionServlet extends HttpServlet {
         // TODO Auto-generated method stub
         response.setContentType("text/html;charset=UTF-8");
         String file_name = request.getParameter("file1");
-        try {
+        try 
+        {
+          long time_start, time_end;
+          time_start = System.currentTimeMillis();
           int kernelSize = 3;
           System.load("C:\\Users\\Carolina\\Downloads\\Instaladores\\opencv\\build\\java\\x64\\opencv_java320.dll");
           
@@ -85,6 +88,8 @@ public class ConvolutionServlet extends HttpServlet {
           img_conv.close();
           out_conv.close();
           out1.close(); 
+          time_end = System.currentTimeMillis();   
+          System.out.println("El tiempo de duración fue: "+ ( time_end - time_start ) +" milisegundos");            
           
        } catch (Exception e) {
            System.out.println("Error: " + e.getMessage());

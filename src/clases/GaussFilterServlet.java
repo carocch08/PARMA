@@ -39,38 +39,44 @@ public class GaussFilterServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.setContentType("text/html;charset=UTF-8");
 		String file_name = request.getParameter("file1");
-		try {
-	         System.load("C:\\Users\\Carolina\\Downloads\\Instaladores\\opencv\\build\\java\\x64\\opencv_java320.dll");
+		try 
+		{
+		  long time_start, time_end;
+          time_start = System.currentTimeMillis();
+	      System.load("C:\\Users\\Carolina\\Downloads\\Instaladores\\opencv\\build\\java\\x64\\opencv_java320.dll");
 	         
-	         Mat source = Imgcodecs.imread(file_name, Imgcodecs.CV_LOAD_IMAGE_GRAYSCALE);
+	       Mat source = Imgcodecs.imread(file_name, Imgcodecs.CV_LOAD_IMAGE_GRAYSCALE);
 	         
-	         Mat destination = new Mat(source.rows(),source.cols(),source.type());
-	         org.opencv.core.Size size = new org.opencv.core.Size(11,45);
-	         Imgproc.GaussianBlur(source, destination, size, 2);
-	         String save_img = request.getParameter("saveImg");
+	       Mat destination = new Mat(source.rows(),source.cols(),source.type());
+	       org.opencv.core.Size size = new org.opencv.core.Size(11,45);
+	       Imgproc.GaussianBlur(source, destination, size, 2);
+           String save_img = request.getParameter("saveImg");
 
-             int aparicion = file_name.indexOf(".");
-             String name = file_name.substring(0, aparicion);
-             String final_name = name + "GaussFilter.jpg";
+           int aparicion = file_name.indexOf(".");
+           String name = file_name.substring(0, aparicion);
+           String final_name = name + "GaussFilter.jpg";
 	            
-             Imgcodecs.imwrite(final_name, destination);
-             response.setContentType("image/jpeg");
-             ServletOutputStream out1;
-             out1 = response.getOutputStream();
-             FileInputStream img_conv = new FileInputStream(final_name);
-             BufferedInputStream inp_conv = new BufferedInputStream(img_conv);
-             BufferedOutputStream out_conv = new BufferedOutputStream(out1);
-             int ch = 0;
-             while ((ch=inp_conv.read()) != -1) {
+           Imgcodecs.imwrite(final_name, destination);
+           response.setContentType("image/jpeg");
+           ServletOutputStream out1;
+           out1 = response.getOutputStream();
+           FileInputStream img_conv = new FileInputStream(final_name);
+           BufferedInputStream inp_conv = new BufferedInputStream(img_conv);
+           BufferedOutputStream out_conv = new BufferedOutputStream(out1);
+           int ch = 0;
+           while ((ch=inp_conv.read()) != -1) 
+           {
              out_conv.write(ch);
-             }             
-             inp_conv.close();
-             img_conv.close();
-             out_conv.close();
-             out1.close(); 
-	            
-	          
-	      } catch (Exception e) {
+           }             
+           inp_conv.close();
+           img_conv.close();
+           out_conv.close();
+           out1.close(); 
+           time_end = System.currentTimeMillis();   
+           System.out.println("El tiempo de duración fue: "+ ( time_end - time_start ) +" milisegundos");               
+	       }
+		   catch (Exception e) 
+		  {
 	         System.out.println("Error: " + e.getMessage());
 	      }
 	}

@@ -42,26 +42,33 @@ public class PsnrServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)throws ServletException, java.io.IOException {
     	processRequest(request, response);
     }
-    
+    /*
+     * @autor Carolina Campos
+     * */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, java.io.IOException 
     {
     	response.setContentType("text/html;charset=UTF-8");
 		PrintWriter out = response.getWriter();
 		 try
 		 { 			 
+		     long time_start, time_end, result;
+	         time_start = System.currentTimeMillis();
 			 String file_name1 = request.getParameter("file1");
 			 String file_name2 = request.getParameter("file2");
 			 double mse = calculate_mse(file_name1, file_name2);
 			 double psnr = 10*log10(255*255/mse);
-			 System.out.println("PSNR: " + psnr);
+			 time_end = System.currentTimeMillis();   
+			 result = time_end - time_start;
 			 out.println("<!DOCTYPE html>");
 			 out.println("<html>");
 			 out.println("<head>");
 			 out.println("<tittle>  </tittle>");
 			 out.println("</head>");
 			 out.println("<body>");
-			 out.println("<h1>MSE: " + mse + "</h1>");
-			 out.println("<h1>PSNR: " + psnr + "</h1>");
+			 out.print("<h1>RESULTADOS</h1>");
+			 out.println("<h2>MSE: " + mse + "</h2>");
+			 out.println("<h2>PSNR: " + psnr + "</h2>");
+			 out.println("<h2>Tiempo de ejecución: " + result + " milisegundos </h2>");
 			 out.println("</body>");
 			 out.println("</html>");
 		 }
@@ -173,7 +180,6 @@ public class PsnrServlet extends HttpServlet {
 	        }
 	
 	        mse = result/(heigh*width); // Mean square error	        
-	        System.out.println("MSE: " + mse);
 	        return mse;
 	 }		 
 }

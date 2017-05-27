@@ -42,6 +42,8 @@ public class EQHistoServlet extends HttpServlet {
 	    String file_name = request.getParameter("file1");
 		try 
         {
+		  long time_start, time_end;
+          time_start = System.currentTimeMillis();
 		  System.load("C:\\Users\\Carolina\\Downloads\\Instaladores\\opencv\\build\\java\\x64\\opencv_java320.dll");
           Mat source = Imgcodecs.imread(file_name, Imgcodecs.CV_LOAD_IMAGE_GRAYSCALE);
           Mat destination = new Mat(source.rows(),source.cols(),source.type());
@@ -67,7 +69,8 @@ public class EQHistoServlet extends HttpServlet {
           img_conv.close();
           out_conv.close();
           out1.close(); 
-              
+          time_end = System.currentTimeMillis();   
+          System.out.println("El tiempo de duración fue: "+ ( time_end - time_start ) +" milisegundos");         
          } 
          catch (Exception e) 
          {
