@@ -18,18 +18,18 @@ import org.opencv.core.Mat;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
 
-import clases.GaussFilter;
+import clases.Gaussian;
 
 /**
  * Servlet implementation class GaussFilterServlet
  */
 @WebServlet("/GaussFilterServlet")
-public class GaussFilterServlet extends HttpServlet {
+public class GaussianServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public GaussFilterServlet() {
+    public GaussianServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -46,7 +46,7 @@ public class GaussFilterServlet extends HttpServlet {
 		{
 		  long time_start, time_end;
           time_start = System.currentTimeMillis();
-          GaussFilter gauss = new GaussFilter();
+          Gaussian gauss = new Gaussian();
           String final_name = gauss.make_gauss(file_name);
           //Para mostrar la imagen
           response.setContentType("image/jpeg");

@@ -13,7 +13,7 @@ import org.opencv.imgproc.Imgproc;
 
 import com.sun.glass.ui.Size;
 
-public class GaussFilter {
+public class Gaussian {
   public String make_gauss(String file_name)
   {
       try {

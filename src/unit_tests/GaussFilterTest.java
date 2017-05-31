@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import clases.GaussFilter;
+import clases.Gaussian;
 
 public class GaussFilterTest {
 
@@ -17,7 +17,7 @@ public class GaussFilterTest {
   @Test
   public void test()
   {
-    GaussFilter gauss = new GaussFilter();
+    Gaussian gauss = new Gaussian();
     gauss.make_gauss("Celula2.jpg");
   }
   

@@ -9,7 +9,7 @@ import org.opencv.imgproc.Imgproc;
  * @return final_name con el nombre del archivo que se guardó
  * @author Carolina Campos
  * */
-public class BilateralFilter {
+public class Bilateral {
   public String make_bilateral(String file_name)
   {
     try {

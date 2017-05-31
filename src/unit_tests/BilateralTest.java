@@ -4,13 +4,13 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import clases.BilateralFilter;
+import clases.Bilateral;
 
 public class BilateralTest {
 
   @Test
   public void test() {
-    BilateralFilter bila = new BilateralFilter();
+    Bilateral bila = new Bilateral();
     bila.make_bilateral("Captura.png");
   }
 

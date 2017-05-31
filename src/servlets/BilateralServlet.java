@@ -22,7 +22,7 @@ import org.opencv.core.Mat;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
 
-import clases.BilateralFilter;
+import clases.Bilateral;
 
 /**
  * Servlet implementation Bilateral class
@@ -52,7 +52,7 @@ public class BilateralServlet extends HttpServlet {
 	        time_start = System.currentTimeMillis();
 			String file_name = request.getParameter("file1");
 			
-			BilateralFilter bilateral = new BilateralFilter();      
+			Bilateral bilateral = new Bilateral();      
             String final_name = bilateral.make_bilateral(file_name);
 
 	        response.setContentType("image/jpeg");
