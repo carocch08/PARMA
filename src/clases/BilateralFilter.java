@@ -4,7 +4,11 @@ import org.opencv.core.Core;
 import org.opencv.core.Mat;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
-
+/*
+ * @param file_name con la imagen a analizar
+ * @return final_name con el nombre del archivo que se guardó
+ * @author Carolina Campos
+ * */
 public class BilateralFilter {
   public String make_bilateral(String file_name)
   {

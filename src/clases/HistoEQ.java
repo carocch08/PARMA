@@ -11,7 +11,11 @@ import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
 
 public class HistoEQ {
-  
+  /*
+   * @param file_name con la imagen a analizar
+   * @return final_name con el nombre del archivo que se guardó
+   * @author Carolina Campos
+   * */
   public String make_histoEQ(String file_name)
   {
     try 

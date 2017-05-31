@@ -30,7 +30,7 @@ public class Psnr {
          {
              for (int j=0; j<width; j++)
              {
-                 array[i][j] = (int)(0xFF & fin.read()); // Unsigned char to integer
+                 array[i][j] = (int)(0xFF & fin.read()); 
              }           
          }
            
@@ -93,6 +93,7 @@ public class Psnr {
   
    /*
     * @param nombre del primer archivo a analizar
+    * @param nombre del segundo archivo a analizar
     * @return nombre del segundo archivo a analizar
     * @return un double con el resultado del mse
     * @author Carolina Campos
@@ -116,11 +117,17 @@ public class Psnr {
             }
           }
   
-          mse = result/(heigh*width); // Mean square error
+          mse = result/(heigh*width);
           System.out.println("MSE: " + mse);
           return mse;
    }       
    
+   /*
+    * @param nombre del primer archivo a analizar
+    * @param nombre del segundo archivo a analizar
+    * @return double con el resultado de psnr
+    * @author Carolina Campos
+    */
    public double calculate_psnr(String file_name1, String file_name2)
    {
      double mse = calculate_mse(file_name1, file_name2);
