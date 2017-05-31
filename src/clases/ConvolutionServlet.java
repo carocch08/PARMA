@@ -69,7 +69,6 @@ public class ConvolutionServlet extends HttpServlet {
           };
           
           Imgproc.filter2D(source, destination, -1, kernel);
-          String save_img = request.getParameter("saveImg");
           int aparicion = file_name.indexOf(".");
           String name = file_name.substring(0, aparicion);
           String final_name = name + "Conv.jpg";
@@ -95,7 +94,7 @@ public class ConvolutionServlet extends HttpServlet {
        } catch (Exception e) {
            System.out.println("Error: " + e.getMessage());
        }
-       }
+}
     
        
 

@@ -49,7 +49,6 @@ public class EQHistoServlet extends HttpServlet {
           Mat source = Imgcodecs.imread(file_name, Imgcodecs.CV_LOAD_IMAGE_GRAYSCALE);
           Mat destination = new Mat(source.rows(),source.cols(),source.type());
                 
-          String save_img = request.getParameter("saveImg");
           int aparicion = file_name.indexOf(".");
           String name = file_name.substring(0, aparicion);
           String final_name = name + "HistoEQ.jpg";

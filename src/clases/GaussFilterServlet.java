@@ -51,7 +51,6 @@ public class GaussFilterServlet extends HttpServlet {
 	       Mat destination = new Mat(source.rows(),source.cols(),source.type());
 	       org.opencv.core.Size size = new org.opencv.core.Size(11,45);
 	       Imgproc.GaussianBlur(source, destination, size, 2);
-           String save_img = request.getParameter("saveImg");
 
            int aparicion = file_name.indexOf(".");
            String name = file_name.substring(0, aparicion);

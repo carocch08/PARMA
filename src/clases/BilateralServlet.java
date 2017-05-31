@@ -51,32 +51,32 @@ public class BilateralServlet extends HttpServlet {
 			String file_name = request.getParameter("file1");
 			System.load("C:\\Users\\Carolina\\Downloads\\Instaladores\\opencv\\build\\java\\x64\\opencv_java320.dll");
 	         
-	         Mat source = Imgcodecs.imread(file_name, Imgcodecs.CV_LOAD_IMAGE_GRAYSCALE);
+	        Mat source = Imgcodecs.imread(file_name, Imgcodecs.CV_LOAD_IMAGE_GRAYSCALE);
 	         
-	         Mat destination = new Mat(source.rows(),source.cols(),source.type());
-	         Imgproc.bilateralFilter(source, destination, 15, 80, 80, Core.BORDER_DEFAULT);
+	        Mat destination = new Mat(source.rows(),source.cols(),source.type());
+	        Imgproc.bilateralFilter(source, destination, 15, 80, 80, Core.BORDER_DEFAULT);
 			   
-	         int aparicion = file_name.indexOf(".");
-	         String name = file_name.substring(0, aparicion);
-	         String final_name = name + "BilateralFilter.jpg";	            
-	         Imgcodecs.imwrite(final_name, destination);
+	        int aparicion = file_name.indexOf(".");
+	        String name = file_name.substring(0, aparicion);
+	        String final_name = name + "BilateralFilter.jpg";	            
+	        Imgcodecs.imwrite(final_name, destination);
 
-	         response.setContentType("image/jpeg");
-	         ServletOutputStream out1;
-	         out1 = response.getOutputStream();
-	         FileInputStream img_conv = new FileInputStream(final_name);
-	         BufferedInputStream inp_conv = new BufferedInputStream(img_conv);
-	         BufferedOutputStream out_conv = new BufferedOutputStream(out1);
-	         int ch = 0;
-	         while ((ch=inp_conv.read()) != -1) {
-	           out_conv.write(ch);
-	         }	           
-	         inp_conv.close();
-	         img_conv.close();
-	         out_conv.close();
-	         out1.close(); 	   
-	         time_end = System.currentTimeMillis();   
-	         System.out.println("El tiempo de duración fue: "+ ( time_end - time_start ) +" milisegundos");      	   	         
+	        response.setContentType("image/jpeg");
+	        ServletOutputStream out1;
+	        out1 = response.getOutputStream();
+	        FileInputStream img_conv = new FileInputStream(final_name);
+	        BufferedInputStream inp_conv = new BufferedInputStream(img_conv);
+	        BufferedOutputStream out_conv = new BufferedOutputStream(out1);
+	        int ch = 0;
+	        while ((ch=inp_conv.read()) != -1) {
+	          out_conv.write(ch);
+	        }	           
+	        inp_conv.close();
+	        img_conv.close();
+	        out_conv.close();
+	        out1.close(); 	   
+	        time_end = System.currentTimeMillis();   
+	        System.out.println("El tiempo de duración fue: "+ ( time_end - time_start ) +" milisegundos");      	   	         
 	      } 
 		finally
 		{

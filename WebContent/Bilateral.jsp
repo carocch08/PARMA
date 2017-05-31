@@ -56,7 +56,7 @@
 					<div class="form-group">
 					<label for="other">Intensidad de espacio:</label>
 						<input type="text" name ="space" />
-					</div>					
+					</div>								
 						<td><input type="submit" form="form1" value="Resultado"></td>
 				</form> 
 		   </div>
