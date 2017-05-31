@@ -12,7 +12,7 @@ import org.opencv.imgproc.Imgproc;
 
 public class HistoEQ {
   
-  public void make_histoEQ(String file_name)
+  public String make_histoEQ(String file_name)
   {
     try 
     {
@@ -26,11 +26,13 @@ public class HistoEQ {
            
       Imgproc.equalizeHist(source, destination);
       Imgcodecs.imwrite(final_name, destination);
+      return final_name;
     }
      catch (Exception e) 
      {
          System.out.println("Error: " + e.getMessage());
      }
+    return "";
   }
 
 }

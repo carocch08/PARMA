@@ -11,8 +11,10 @@ import org.opencv.core.Mat;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
 
+import com.sun.prism.Image;
+
 public class Convolution {
-  public void make_convolution(String file_name)
+  public String make_convolution(String file_name)
   {
     try 
     {
@@ -43,10 +45,12 @@ public class Convolution {
       String name = file_name.substring(0, aparicion);
       String final_name = name + "Conv.jpg";
       Imgcodecs.imwrite(final_name, destination);
+      return final_name;
       
    } catch (Exception e) {
        System.out.println("Error: " + e.getMessage());
    }
+    return file_name;
     
   }
 }

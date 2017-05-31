@@ -14,10 +14,10 @@ import org.opencv.imgproc.Imgproc;
 import com.sun.glass.ui.Size;
 
 public class GaussFilter {
-  public void make_gauss(String file_name)
+  public String make_gauss(String file_name)
   {
       try {
-        System.loadLibrary( Core.NATIVE_LIBRARY_NAME );
+        System.load("C:\\Users\\Carolina\\Downloads\\Instaladores\\opencv\\build\\java\\x64\\opencv_java320.dll");
         
         Mat source = Imgcodecs.imread(file_name, Imgcodecs.CV_LOAD_IMAGE_GRAYSCALE);
         
@@ -30,9 +30,11 @@ public class GaussFilter {
         String final_name = name + "GaussFilter.jpg";
              
         Imgcodecs.imwrite(final_name, destination);
+        return final_name;
      
      } catch (Exception e) {
         System.out.println("Error: " + e.getMessage());
      }
+      return "";
   }
 }

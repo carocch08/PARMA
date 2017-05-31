@@ -18,6 +18,8 @@ import org.opencv.core.Mat;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
 
+import clases.HistoEQ;
+
 /**
  * Servlet implementation class EQHistoServlet
  */
@@ -45,16 +47,8 @@ public class EQHistoServlet extends HttpServlet {
         {
 		  long time_start, time_end;
           time_start = System.currentTimeMillis();
-		  System.load("C:\\Users\\Carolina\\Downloads\\Instaladores\\opencv\\build\\java\\x64\\opencv_java320.dll");
-          Mat source = Imgcodecs.imread(file_name, Imgcodecs.CV_LOAD_IMAGE_GRAYSCALE);
-          Mat destination = new Mat(source.rows(),source.cols(),source.type());
-                
-          int aparicion = file_name.indexOf(".");
-          String name = file_name.substring(0, aparicion);
-          String final_name = name + "HistoEQ.jpg";
-               
-          Imgproc.equalizeHist(source, destination);
-          Imgcodecs.imwrite(final_name, destination);
+          HistoEQ histo = new HistoEQ();
+          String final_name = histo.make_histoEQ(file_name);
           response.setContentType("image/jpeg");
           ServletOutputStream out1;
           out1 = response.getOutputStream();
