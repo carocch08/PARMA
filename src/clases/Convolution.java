@@ -38,8 +38,8 @@ public class Convolution {
             put(1,1,1);
             put(1,2,0);
 
-            put(2,0,0);
-            put(2,1,0);
+            put(2,2,0);
+            put(2,1,1);
             put(2,2,0);
          }
       };

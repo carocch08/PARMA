@@ -44,11 +44,11 @@
 	 	<div class="general">
 	            <h1>Procesador de imágenes</h1>
 	            <form enctype="multipart/form-data">
-	            	<label for="fname">Imagen 1</label>
+	            	<label for="fname">Seleccione la imagen 1:</label>
 	                <div class="form-group">
 	                    <input id="file-1" type="file" class="file" multiple=true name="file1" data-preview-file-type="any">
 	                </div>
-	                <label for="fname">Imagen 2</label>
+	                <label for="fname">Seleccione la imagen 2:</label>
 	                <div class="form-group">
 	                    <input id="file-3" type="file" multiple=true name="file2">
 	                </div>
