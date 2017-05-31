@@ -1,4 +1,4 @@
-package clases;
+package servlets;
 
 import static org.junit.Assert.fail;
 
@@ -18,6 +18,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.junit.Test;
+
+import clases.Psnr;
 
 /**
  * Servlet implementation class PsnrServlet

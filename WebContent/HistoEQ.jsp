@@ -40,10 +40,10 @@
 </style>
 </head>
 	 <body>
-		 <form enctype="multipart/form-data" action="EQHistoServlet">
+		 <form enctype="multipart/form-data" action="HistoEQServlet">
 		 	<div class="general">
 		     	<h1 align="left"> Ecualizador <br> <align="center">histogramas </h1>
-		        <form action="EQHistoServlet" >
+		        <form action="HistoEQServlet" >
 		        	<div class="form-group">
 		        		<label for="other">Seleccione la imagen:</label>
 				    	<input id="file-1" type="file" class="file" multiple=true name="file1" data-preview-file-type="any">

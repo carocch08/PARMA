@@ -1,4 +1,4 @@
-package clases;
+package servlets;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -21,6 +21,8 @@ import org.opencv.core.Core;
 import org.opencv.core.Mat;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
+
+import clases.BilateralFilter;
 
 /**
  * Servlet implementation Bilateral class

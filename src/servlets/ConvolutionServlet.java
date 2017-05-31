@@ -1,4 +1,4 @@
-package clases;
+package servlets;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -18,6 +18,8 @@ import org.opencv.core.CvType;
 import org.opencv.core.Mat;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
+
+import clases.Convolution;
 
 /**
  * Servlet implementation class ConvolutionServlet
