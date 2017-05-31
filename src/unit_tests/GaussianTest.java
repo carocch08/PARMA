@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import clases.Gaussian;
 
-public class GaussFilterTest {
+public class GaussianTest {
 
 //  @Test
 //  public void test() {
