@@ -11,7 +11,7 @@ public class BilateralTest {
   @Test
   public void test() {
     Bilateral bila = new Bilateral();
-    bila.make_bilateral("Captura.png");
+    bila.make_bilateral("C:\\Users\\Carolina\\workspace\\PARMA\\images\\Celula.PNG", "Bilateral");
   }
 
 }

@@ -11,7 +11,7 @@ public class ConvolutionTest {
   @Test
   public void test() {
     Convolution conv = new Convolution();       
-    conv.make_convolution("Captura.png");
+    conv.make_convolution("C:\\Users\\Carolina\\workspace\\PARMA\\images\\Celula.PNG", "Convolution");
   }
 
 }

@@ -42,12 +42,13 @@ public class GaussianServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.setContentType("text/html;charset=UTF-8");
 		String file_name = request.getParameter("file1");
+		String new_name = request.getParameter("new_name");
 		try 
 		{
 		  long time_start, time_end;
           time_start = System.currentTimeMillis();
           Gaussian gauss = new Gaussian();
-          String final_name = gauss.make_gauss(file_name);
+          String final_name = gauss.make_gauss(file_name, new_name);
           //Para mostrar la imagen
           response.setContentType("image/jpeg");
           ServletOutputStream out1;

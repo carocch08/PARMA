@@ -36,12 +36,13 @@ public class HistoEQServlet extends HttpServlet {
         // TODO Auto-generated method stub
         response.setContentType("text/html;charset=UTF-8");
         String file_name = request.getParameter("file1");
+        String new_name = request.getParameter("new_name");
         try 
         {
           long time_start, time_end;
           time_start = System.currentTimeMillis();
           HistoEQ histo = new HistoEQ();
-          String final_name = histo.make_histoEQ(file_name);
+          String final_name = histo.make_histoEQ(file_name, new_name);
           response.setContentType("image/jpeg");
           ServletOutputStream out1;
           out1 = response.getOutputStream();

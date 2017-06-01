@@ -11,7 +11,7 @@ public class PsnrTest {
   @Test
   public void test() {
     Psnr psnr = new Psnr();
-    psnr.calculate_psnr("Celula.png", "Celula2.jpg");
+    psnr.calculate_psnr("C:\\Users\\Carolina\\workspace\\PARMA\\images\\Celula.PNG", "C:\\Users\\Carolina\\workspace\\PARMA\\images\\Celula2.jpg");
   }
 
 }

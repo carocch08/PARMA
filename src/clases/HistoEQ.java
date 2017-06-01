@@ -16,7 +16,7 @@ public class HistoEQ {
    * @return final_name con el nombre del archivo que se guardó
    * @author Carolina Campos
    * */
-  public String make_histoEQ(String file_name)
+  public String make_histoEQ(String file_name, String new_name)
   {
     try 
     {
@@ -24,9 +24,7 @@ public class HistoEQ {
       Mat source = Imgcodecs.imread(file_name, Imgcodecs.CV_LOAD_IMAGE_GRAYSCALE);
       Mat destination = new Mat(source.rows(),source.cols(),source.type());
             
-      int aparicion = file_name.indexOf(".");
-      String name = file_name.substring(0, aparicion);
-      String final_name = name + "HistoEQ.jpg";
+      String final_name = "C:\\Users\\Carolina\\workspace\\PARMA\\images\\" + new_name + ".jpg";
            
       Imgproc.equalizeHist(source, destination);
       Imgcodecs.imwrite(final_name, destination);
@@ -38,5 +36,7 @@ public class HistoEQ {
      }
     return "";
   }
+  
+  
 
 }

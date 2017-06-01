@@ -11,7 +11,7 @@ public class HistoEQTest {
   @Test
   public void test() {
    HistoEQ histo = new HistoEQ();
-   histo.make_histoEQ("Captura.png");
+   histo.make_histoEQ("C:\\Users\\Carolina\\workspace\\PARMA\\images\\Celula.PNG", "HistoEQ");
   }
 
 }

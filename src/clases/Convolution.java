@@ -18,7 +18,7 @@ import com.sun.prism.Image;
  * @author Juan Manuel Guevara
  * */
 public class Convolution {
-  public String make_convolution(String file_name)
+  public String make_convolution(String file_name, String new_name)
   {
     try 
     {
@@ -45,9 +45,7 @@ public class Convolution {
       };
       
       Imgproc.filter2D(source, destination, -1, kernel);
-      int aparicion = file_name.indexOf(".");
-      String name = file_name.substring(0, aparicion);
-      String final_name = name + "Conv.jpg";
+      String final_name = "C:\\Users\\Carolina\\workspace\\PARMA\\images\\" + new_name + ".jpg";
       Imgcodecs.imwrite(final_name, destination);
       return final_name;
       

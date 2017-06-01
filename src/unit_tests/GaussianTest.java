@@ -8,17 +8,11 @@ import clases.Gaussian;
 
 public class GaussianTest {
 
-//  @Test
-//  public void test() {
-//    HistoEQ histo = new HistoEQ();
-//    histo.make_histoEQ("Celula");
-//  }
-  
   @Test
   public void test()
   {
     Gaussian gauss = new Gaussian();
-    gauss.make_gauss("Celula2.jpg");
+    gauss.make_gauss("C:\\Users\\Carolina\\workspace\\PARMA\\images\\Celula.PNG", "Gauss");
   }
   
 

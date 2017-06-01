@@ -49,6 +49,10 @@
 				    	<input id="file-1" type="file" class="file" multiple=true name="file1" data-preview-file-type="any">				    	
 				        <BR>
 				    </div>
+				    <div class="form-group">
+					<label for="other">Nombre de la nueva imagen:</label>
+						<input type="text" name ="new_name" />
+					</div>
 					<div class="form-group">
 						<label for="other">Intensidad dominante:</label>
 						<input type="text" name ="dominante" />

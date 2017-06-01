@@ -51,9 +51,10 @@ public class BilateralServlet extends HttpServlet {
 	        long time_start, time_end;
 	        time_start = System.currentTimeMillis();
 			String file_name = request.getParameter("file1");
+			String new_name = request.getParameter("new_name");
 			
 			Bilateral bilateral = new Bilateral();      
-            String final_name = bilateral.make_bilateral(file_name);
+            String final_name = bilateral.make_bilateral(file_name, new_name);
 
 	        response.setContentType("image/jpeg");
 	        ServletOutputStream out1;

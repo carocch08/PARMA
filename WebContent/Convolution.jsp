@@ -47,7 +47,11 @@
 		        	<div class="form-group">
 		        		<label for="other">Seleccione la imagen:</label>
 				    	<input id="file-1" type="file" class="file" multiple=true name="file1" data-preview-file-type="any">
-				    </div>					
+				    </div>	
+				    <div class="form-group">
+						<label for="other">Nombre de la nueva imagen:</label>
+							<input type="text" name ="new_name" />
+					</div>				
 					<div class="form-group">
 						<td><input type="submit" form="form1" value="Resultado"></td>
 					</div>					

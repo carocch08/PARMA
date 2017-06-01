@@ -46,8 +46,11 @@ public class ConvolutionServlet extends HttpServlet {
         time_start = System.currentTimeMillis();
         response.setContentType("text/html;charset=UTF-8");
         String file_name = request.getParameter("file1");
+        String new_name = request.getParameter("new_name");
+        
         Convolution convolution = new Convolution();
-        String final_name = convolution.make_convolution(file_name);
+        String final_name = convolution.make_convolution(file_name, new_name);
+        
         response.setContentType("image/jpeg");
         ServletOutputStream out1;
         out1 = response.getOutputStream();
