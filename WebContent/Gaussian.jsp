@@ -41,6 +41,9 @@
 </head>
 	 <body>
 		 <form enctype="multipart/form-data" action="GaussFilterServlet">
+			<ul>
+	  			<li><a href="Index.jsp">Inicio</a></li>
+	  		</ul>
 		 	<div class="general">
 		     	<h1>Filtro Gaussiano</h1>
 		        <form action="GaussianFilterServlet" >

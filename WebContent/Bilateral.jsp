@@ -41,6 +41,9 @@
 </head>
 	 <body>
 		 <form enctype="multipart/form-data" action="Bilateral">
+		 	<ul>
+	  			<li><a href="Index.jsp">Inicio</a></li>
+	  		</ul>
 		 	<div class="general">
 		     	<h1>Filtro Bilateral</h1>
 		        <form action="Bilateral" >

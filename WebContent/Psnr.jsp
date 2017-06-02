@@ -41,8 +41,11 @@
 </head>
  <body>
 	 <form enctype="multipart/form-data" action="PsnrServlet">
+	 	<ul>
+	  		<li><a href="Index.jsp">Inicio</a></li>
+	    </ul>
 	 	<div class="general">
-	            <h1>Procesador de imágenes</h1>
+	            <h1>PSNR y MSE</h1>
 	            <form enctype="multipart/form-data">
 	            	<label for="fname">Seleccione la imagen 1:</label>
 	                <div class="form-group">
@@ -52,10 +55,7 @@
 	                <div class="form-group">
 	                    <input id="file-3" type="file" multiple=true name="file2">
 	                </div>
-	                <div class="form-group">
-	                    <button class="btn btn-primary">Resultado</button>
-	                    <button class="btn btn-default" type="reset" style="margin-left: 25%;">Reset</button>
-	                </div>
+	                <td><input type="submit" form="form1" value="Resultado"></td>
 	            </form>
 	        </div>
 	   </form>

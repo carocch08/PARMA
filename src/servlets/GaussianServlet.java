@@ -51,11 +51,11 @@ public class GaussianServlet extends HttpServlet {
           String final_name = gauss.make_gauss(file_name, new_name);
           //Para mostrar la imagen
           response.setContentType("image/jpeg");
-          ServletOutputStream out1;
-          out1 = response.getOutputStream();
+          ServletOutputStream out;
+          out = response.getOutputStream();
           FileInputStream img_conv = new FileInputStream(final_name);
           BufferedInputStream inp_conv = new BufferedInputStream(img_conv);
-          BufferedOutputStream out_conv = new BufferedOutputStream(out1);
+          BufferedOutputStream out_conv = new BufferedOutputStream(out);
           int ch = 0;
           while ((ch=inp_conv.read()) != -1) 
           {
@@ -64,7 +64,7 @@ public class GaussianServlet extends HttpServlet {
           inp_conv.close();
           img_conv.close();
           out_conv.close();
-          out1.close(); 
+          out.close(); 
           time_end = System.currentTimeMillis();   
           System.out.println("El tiempo de duración fue: "+ ( time_end - time_start ) +" milisegundos");               
 	     }

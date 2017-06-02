@@ -41,6 +41,9 @@
 </head>
 	 <body>
 		 <form enctype="multipart/form-data" action="ConvolutionServlet">
+		 	<ul>
+	  			<li><a href="Index.jsp">Inicio</a></li>
+	  		</ul>
 		 	<div class="general">
 		     	<h1>Convolución <br> de imágenes</h1>
 		        <form action="ConvolutionServlet" >

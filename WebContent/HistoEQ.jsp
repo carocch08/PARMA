@@ -41,6 +41,9 @@
 </head>
 	 <body>
 		 <form enctype="multipart/form-data" action="HistoEQServlet">
+		 	<ul>
+	  			<li><a href="Index.jsp">Inicio</a></li>
+	  		</ul>
 		 	<div class="general">
 		     	<h1 align="left"> Ecualizador <br> <align="center">histogramas </h1>
 		        <form action="HistoEQServlet" >
