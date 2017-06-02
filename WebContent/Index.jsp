@@ -56,11 +56,11 @@ li a:hover:not(.active) {
 
 <body>
 	<ul>
-	  <li><a href="Bilateral.jsp">Filtro Bilateral</a></li>
-	  <li><a href="Gaussian.jsp">Filtro Gaussiano</a></li>
-	  <li><a href="Convolution.jsp">Convolución</a></li>
-	  <li><a href="HistoEQ.jsp">Ecualizador de histogramas</a></li>
 	  <li><a href="Psnr.jsp">PSNR</a></li>
+	  <li><a href="Convolution.jsp">Convolución</a></li>
+	  <li><a href="Bilateral.jsp">Filtro Bilateral</a></li>
+	  <li><a href="Gaussian.jsp">Filtro Gaussiano</a></li>	  
+	  <li><a href="HistoEQ.jsp">Ecualizador de histogramas</a></li>	  
 	</ul>
 </body>
 </html>
