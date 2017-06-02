@@ -6,9 +6,9 @@ import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
 /*
  * @param file_name con la imagen a analizar
- * @return final_name con el nombre del archivo que se guardó
+ * @return final_name con el nombre del archivo que se guardará
  * @author Carolina Campos
- * */
+ */
 public class Bilateral {
   public String make_bilateral(String file_name, String new_name)
   {

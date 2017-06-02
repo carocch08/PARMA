@@ -13,6 +13,11 @@ import org.opencv.imgproc.Imgproc;
 
 import com.sun.glass.ui.Size;
 
+/*
+ * @param file_name con la imagen a analizar
+ * @return final_name con el nombre del archivo que se guardará
+ * @author Carolina Campos
+ */
 public class Gaussian {
   public String make_gauss(String file_name, String new_name)
   {

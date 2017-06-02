@@ -14,9 +14,9 @@ import org.opencv.imgproc.Imgproc;
 import com.sun.prism.Image;
 /*
  * @param file_name con la imagen a analizar
- * @return final_name con el nombre del archivo que se guardó
+ * @return final_name con el nombre del archivo que se guardará
  * @author Juan Manuel Guevara
- * */
+ */
 public class Convolution {
   public String make_convolution(String file_name, String new_name)
   {

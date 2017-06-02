@@ -15,7 +15,7 @@ public class HistoEQ {
    * @param file_name con la imagen a analizar
    * @return final_name con el nombre del archivo que se guardó
    * @author Carolina Campos
-   * */
+   */
   public String make_histoEQ(String file_name, String new_name)
   {
     try 
