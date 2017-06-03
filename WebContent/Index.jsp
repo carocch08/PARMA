@@ -52,6 +52,7 @@ li a:hover:not(.active) {
     background-color: #555;
     color: white;
 }
+
 </style>
 
 <body>
